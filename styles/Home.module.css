@@ -1,0 +1,55 @@
+.container > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .text {
+    pointer-events: none;
+    justify-content: start !important;
+    font-family: 'Kanit', sans-serif;
+    line-height: 0px;
+  }
+  
+  .number {
+    font-size: 30px;
+    color: #545864;
+  }
+  
+  .number span {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .slopeBegin {
+    background-color: rgb(255, 255, 249);
+    clip-path: polygon(20% 0, 70% 0, 50% 100%, 0% 100%);
+  }
+  
+  .slopeEnd {
+    clip-path: polygon(70% 0, 100% 0, 80% 100%, 50% 100%);
+  }
+  
+  .slopeBegin,
+  .slopeEnd {
+    position: absolute;
+    width: 170%;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .CoData {
+    background: linear-gradient(to right, deeppink 0%, coral 100%);
+  }
+  
+  .Stack {
+    background: linear-gradient(to right, #6a5acd 0%, #00bfff 100%);
+  }
+  
+  .last {
+    background: linear-gradient(to right, tomato 0%, gold 100%);
+  }
+  .Queue{
+    background: linear-gradient(to right, cyan 0%,darkcyan 100%);
+  }
+  

@@ -1,0 +1,67 @@
+
+.arrow {
+    width:100px;
+    height:30px;
+    display: flex;
+    background-color: #faebd7;
+  }
+  .arrow:before {
+    content: "";
+    background: currentColor;
+    width:15px;
+    clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+    animation: a1 1.5s 1 ease-in;
+    animation-fill-mode: forwards;
+  }
+  @keyframes a1 {
+    90%,100%{flex-grow: 1}
+  }
+  .rot{
+    transform: rotate(90deg) translateX(-35px);
+    width: 30px;
+  }
+
+  .container {
+    /* position: absolute; */
+    height: 300px;
+    width: 900px;
+    /* top: 60px; */
+    /* left: calc(100% - 950px); */
+    display: flex;
+    /* flex-direction: column; */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* height: 280px;
+    width: 200px; */
+    background-color: burlywood;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.50);
+  /*   margin-left: -50px; */
+  border: 2px solid white;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+  }
+  
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
